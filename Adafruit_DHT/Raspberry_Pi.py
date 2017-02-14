@@ -23,7 +23,7 @@ from . import Raspberry_Pi_Driver as driver
 
 def read(sensor, pin):
     # Validate pin is a valid GPIO.
-    if pin is None or int(pin) < 0 or int(pin) > 31:
+    if pin is None or int(pin) < 0 or int(pin) > 38:
         raise ValueError('Pin must be a valid GPIO number 0 to 31.')
     # Get a reading from C driver code.
     result, humidity, temp = driver.read(sensor, int(pin))
